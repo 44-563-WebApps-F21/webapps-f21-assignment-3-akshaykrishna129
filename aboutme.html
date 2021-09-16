@@ -21,5 +21,84 @@
     <br>
     <img src="bhagat.jpg" alt="Bhagat singh picture">
     <hr>
+    <h2>
+        Favourite food
+    </h2>
+    My some of favouite food items.
+    <table>
+        <tr>
+            <th>Food Item</th>
+            <th>Place</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>
+                Biryani
+            </td>
+            <td>
+                Godavari
+            </td>
+            <td>
+                $10
+
+            </td>
+
+           
+        </tr>
+        <tr>
+            <td>
+                Burger
+            </td>
+            <td>
+                Burger king 
+            </td>
+            <td>
+                $14
+            </td>
+        </tr>
+    <tr>
+        <td>
+            Haleem
+        </td>
+        <td>
+            pista house
+        </td>
+        <td>
+            $17
+        </td>
+    </tr>
+    <tr>
+        <td>
+            samosa
+        </td>
+        <td>
+            swagat
+        </td>
+        <td>
+            $7
+        </td>
+    </tr>
+    </table>
+    <hr>
+    <h2>
+        String HASHING
+    </h2>
+    <blockquote site ="https://www.geeksforgeeks.org/string-hashing-using-polynomial-rolling-hash-function/">
+        String hashing is the way to convert a string into an integer known as a hash of that string.
+        An ideal hashing is the one in which there are minimum chances of collision</blockquote>
+        <a href ="https://www.geeksforgeeks.org/string-hashing-using-polynomial-rolling-hash-function">For more details</a>
+        <pre>
+            long long compute_hash(string const& s) {
+                const int p = 31;
+                const int m = 1e9 + 9;
+                long long hash_value = 0;
+                long long p_pow = 1;
+                for (char c : s) {
+                    hash_value = (hash_value + (c - 'a' + 1) * p_pow) % m;
+                    p_pow = (p_pow * p) % m;
+                }
+                return hash_value;
+            }
+        </pre>
 
 </body>
